@@ -57,3 +57,6 @@ body {
   text-transform: lowercase;
   color: black;
 }
+.notes-link a:hover {
+  color: rgb(87, 84, 84);
+}
