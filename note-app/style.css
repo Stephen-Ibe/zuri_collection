@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  overflow: hidden;
+}
+html,
+body {
+  background-color: bisque;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.front-page {
+  width: 50vw;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.note-area {
+  margin: 10px 0;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 20px;
+}
+.submit {
+  width: 150px;
+  margin: 30px auto;
+  padding: 10px 0;
+  color: wheat;
+  background-color: #2881d5;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.submit:hover {
+  background-color: wheat;
+  color: #2881d5;
+  border: 1px solid black;
+  position: relative;
+}
+.notes-link a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: black;
+}
