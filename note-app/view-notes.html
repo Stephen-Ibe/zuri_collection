@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Notes</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="second_page">
+      <ol id="note-list"></ol>
+    </div>
+    <a href="./index.html">
+      <h3>Go Back</h3>
+    </a>
+
+    <script>
+      const getNotes = () => {
+        let notes = getExistingNotes();
+        let noteArray = Object.values(notes);
+        let orderedList = document.getElementById("note-list");
+
+        noteArray.map((note) => {
+          let listItem = document.createElement("li");
+          listItem.innerHTML = note;
+          orderedList.appendChild(listItem);
+        });
+      };
+    </script>
+  </body>
+</html>
