@@ -6,5 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note App</title>
   </head>
-  <body></body>
+  <body>
+    <div class="front-page">
+      <h2 class="header">Note Taker App</h2>
+      <textarea
+        name="note-text"
+        id="note"
+        cols="30"
+        rows="10"
+        class="note-area"
+      ></textarea>
+      <button id="submit" onclick="saveNote()" class="submit">Save Note</button>
+      <div class="notes-link">
+        <a href="./view-notes.html">View Notes</a>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      const saveNote = () => {
+        let textElement = document.getElementById("note");
+        if (textElement.value === "") {
+          return alert("Text is Empty");
+        }
+        const id = getNoteId();
+        let noteObj = getExistingNotes();
+        if (!noteObj) {
+          noteObj = {};
+        }
+        noteObj[id] = textElement.value;
+        localStorage.setItem("notes", JSON.stringify(noteObj));
+        alert("Note Saved");
+      };
+    </script>
+  </body>
 </html>
